@@ -13,10 +13,6 @@ import nltk
 nltk.download('stopwords')
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
-import Bio
-from Bio import SeqIO, Entrez
-from Bio import pairwise2
-from Bio.pairwise2 import format_alignment
 import pandas as pd
 from itertools import tee, islice, chain
 #nagłowek
@@ -132,8 +128,6 @@ if int_put:
     from sklearn.datasets import make_classification
 
     import pickle
-    #rnd = pickle.load(open('C:\\Users\\UMB\\Desktop\\drugforest\\drugforest\\static\\finalized_model_32.sav', 'rb'))
-
     a = query(tablica_in)
     d = []
     for w in a:
@@ -174,7 +168,7 @@ if int_put:
     st.write(df_index.shift()[1:])
 
     #drug
-    df_drug = pd.read_excel('./Products1.xlsx')
+    df_drug = pd.read_csv('./Products1.csv')
     list_drug = set(list(df_drug['ActiveIngredient']))
     list_drug = list(list_drug)
     list_drug_lower = [x.lower() for x in list_drug]
@@ -218,7 +212,7 @@ if int_put:
     df = pd.DataFrame(list(zip(word, count_word)),
                  columns =['Drug name', 'Count'])
     df1 = df[df['Count']>drugs_count1]
-    df1.to_csv('drug.csv')
+    #df1.to_csv('drug.csv')
     df1 = df1.sort_values(by=['Count'], ascending=False)
     st.markdown("<h3 style='text-align: center; color: black;'>Results</h3>", unsafe_allow_html=True)
     df1
