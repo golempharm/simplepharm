@@ -13,10 +13,6 @@ import nltk
 nltk.download('stopwords')
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
-import Bio
-from Bio import SeqIO, Entrez
-from Bio import pairwise2
-from Bio.pairwise2 import format_alignment
 import pandas as pd
 from itertools import tee, islice, chain
 #nagłowek
