@@ -170,7 +170,7 @@ if int_put:
     st.write(df_index.shift()[1:])
 
     #drug
-    df_drug = pd.read_excel('./Products1.xlsx')
+    df_drug = pd.read_csv('./Products1.csv')
     list_drug = set(list(df_drug['ActiveIngredient']))
     list_drug = list(list_drug)
     list_drug_lower = [x.lower() for x in list_drug]
