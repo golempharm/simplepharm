@@ -217,7 +217,7 @@ if int_put:
     df1.to_csv('drug.csv')
     df1 = df1.sort_values(by=['Count'], ascending=False)
     st.markdown("<h3 style='text-align: center; color: black;'>Drugs related to protein:</h3>", unsafe_allow_html=True)
-    st.write(df_index['Protein'][0]
+    st.write(df_index['Protein'][0])
     df1
 
     #from pubchempy import get_compounds
