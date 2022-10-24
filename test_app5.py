@@ -1,20 +1,20 @@
 import streamlit as st
-#from flask import Flask, request, render_template
+
 from pymed import PubMed
 import pandas as pd
 import sklearn
 import pickle
 import os
 from datetime import datetime
-#import flask_sqlalchemy
-#from flask_sqlalchemy import SQLAlchemy
+
 import nltk
-#nltk.download('averaged_perceptron_tagger')
+
 nltk.download('stopwords')
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 import pandas as pd
 from itertools import tee, islice, chain
+
 #nagłowek
 st.title('GoLem Pharm')
 st.write('')
@@ -220,6 +220,4 @@ if int_put:
     st.write('Drugs related to protein: ' + df_index['Protein'][0])
     df1
 
-    #from pubchempy import get_compounds
-    #c = Compound.from_cid(1423)
-    #cs = get_compounds(df1['Drug name'][0], 'name')
+    
