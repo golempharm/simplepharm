@@ -184,7 +184,7 @@ if int_put:
         max1 =int(add_slider)	# ilosc zapytan ze slidera
         drugs_count = 10
         drugs_count1 = int(drugs_count)
-
+        time.sleep(1)
         pubmed = PubMed(tool="MyTool", email="p.karabowicz@gmail.com")
         results1 = pubmed.query(text, max_results=max1)
         wynik.append(results1)
