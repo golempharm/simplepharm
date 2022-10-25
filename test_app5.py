@@ -35,6 +35,7 @@ if int_put:
     pubmed = PubMed(tool="golem", email="p.karabowicz@gmail.com")
     my_api_key = '3f16e1d2a0aae15e5d9dfc6610fbd0a81709'
     pubmed.parameters.update({'api_key': my_api_key})
+    pubmed._rateLimit = 10
     results1 = pubmed.query(text, max_results=max1)
 
     #przeksztalcenie wynikow zapytania na data frame
