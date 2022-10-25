@@ -33,6 +33,8 @@ if int_put:
 
     #wporwadzenie zapytania do pubmed
     pubmed = PubMed(tool="golem", email="p.karabowicz@gmail.com")
+    my_api_key = '3f16e1d2a0aae15e5d9dfc6610fbd0a81709'
+    pubmed.parameters.update({'api_key': my_api_key})
     results1 = pubmed.query(text, max_results=max1)
 
     #przeksztalcenie wynikow zapytania na data frame
@@ -108,6 +110,8 @@ if int_put:
 
     def query(list_target):
         pubmed = PubMed(tool="golem", email="p.karabowicz@gmail.com")
+        my_api_key = '3f16e1d2a0aae15e5d9dfc6610fbd0a81709'
+        pubmed.parameters.update({'api_key': my_api_key})
         lista=[]
         for w in list_target:
             time.sleep(25)
@@ -187,6 +191,8 @@ if int_put:
         drugs_count1 = int(drugs_count)
         time.sleep(25)
         pubmed = PubMed(tool="golem", email="p.karabowicz@gmail.com")
+        my_api_key = '3f16e1d2a0aae15e5d9dfc6610fbd0a81709'
+        pubmed.parameters.update({'api_key': my_api_key})
         results1 = pubmed.query(text, max_results=max1)
         wynik.append(results1)
    #przeksztalcenie wynikow zapytania na data frame
