@@ -32,7 +32,7 @@ if int_put:
     max1 =int(add_slider)  # ilosc zapytan ze slidera
 
     #wporwadzenie zapytania do pubmed
-    pubmed = PubMed(tool="MyTool", email="p.karabowicz@gmail.com")
+    pubmed = PubMed(tool="golem", email="p.karabowicz@gmail.com")
     results1 = pubmed.query(text, max_results=max1)
 
     #przeksztalcenie wynikow zapytania na data frame
@@ -107,7 +107,7 @@ if int_put:
     import time
 
     def query(list_target):
-        pubmed = PubMed(tool="MyTool", email="p.karabowicz@gmail.com")
+        pubmed = PubMed(tool="golem", email="p.karabowicz@gmail.com")
         lista=[]
         for w in list_target:
             time.sleep(25)
@@ -186,7 +186,7 @@ if int_put:
         drugs_count = 10
         drugs_count1 = int(drugs_count)
         time.sleep(25)
-        pubmed = PubMed(tool="MyTool", email="p.karabowicz@gmail.com")
+        pubmed = PubMed(tool="golem", email="p.karabowicz@gmail.com")
         results1 = pubmed.query(text, max_results=max1)
         wynik.append(results1)
    #przeksztalcenie wynikow zapytania na data frame
