@@ -110,7 +110,7 @@ if int_put:
         pubmed = PubMed(tool="MyTool", email="p.karabowicz@gmail.com")
         lista=[]
         for w in list_target:
-            time.sleep(1)
+            time.sleep(25)
             lista.append(pubmed.query(w, max_results=20))
         return lista
 
@@ -134,7 +134,7 @@ if int_put:
     d = []
     for w in a:
         b = lista_bastract_pred1(w) ## ziterować
-        time.sleep(25)
+        time.sleep(1)
         d.append(b)
 
     d2=[]
