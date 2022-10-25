@@ -181,7 +181,8 @@ if int_put:
     for w in zapyt:
     #st.write('your results for request: ', zapyt)
         text = w
-        max1 =int(add_slider)	# ilosc zapytan ze slidera
+        #max1 =int(add_slider)	# ilosc zapytan ze slidera
+        max1 = 200
         drugs_count = 10
         drugs_count1 = int(drugs_count)
         time.sleep(1)
