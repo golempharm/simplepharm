@@ -134,7 +134,7 @@ if int_put:
     d = []
     for w in a:
         b = lista_bastract_pred1(w) ## ziterować
-        time.sleep(1)
+        time.sleep(25)
         d.append(b)
 
     d2=[]
