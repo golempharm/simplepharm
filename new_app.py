@@ -13,6 +13,7 @@ from itertools import tee, islice, chain
 from urllib.error import HTTPError
 #header
 st.title('GolemPharm')
+st.write("[Main](https://golempharm.github.io/page/)")
 st.write('')
 
 # Add a slider to the sidebar:
